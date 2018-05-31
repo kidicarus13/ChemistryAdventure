@@ -21,3 +21,297 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+import java.util.Scanner;
+public static final int STARTING_NUM_OF_LIVES = 3;
+
+public static void main(String[] args) {
+
+  int lives = STARTING_NUM_OF_LIVES;
+
+  Scanner console = new Scanner(System.in);
+  
+  System.out.println(" Welcome to Kooitopia, land of chemistry and all things chemistry. \nAnything other than chemistry is not discussed, and is deemed completely unimportant. Join us in this land of chemistry.");
+  
+  System.out.println(\n"Lives: " + lives);
+  
+  System.out.println("As you begin this journey in Kooitopia, you initially come across the Stoichiometry cliffs. To get safely across the bridge, you must solve a stoichiometry problem.");
+  
+  System.out.println("\n\
+
+\    O
+ _\|  |  }
+   M_/|\_|}
+      |  }
+     / \
+   _/   \_
+
+
+                                           ^^
+      ^^      ..                                       ..
+              []                                       []
+            .:[]:_          ^^                       ,:[]:.
+          .: :[]: :-.                             ,-: :[]: :.
+        .: : :[]: : :`._                       ,.': : :[]: : :.
+      .: : : :[]: : : : :-._               _,-: : : : :[]: : : :.
+  _..: : : : :[]: : : : : : :-._________.-: : : : : : :[]: : : : :-._
+  _:_:_:_:_:_:[]:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:[]:_:_:_:_:_:_
+  !!!!!!!!!!!![]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!![]!!!!!!!!!!!!!
+  ^^^^^^^^^^^^[]^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[]^^^^^^^^^^^^^
+              []                                       []
+              []                                       []
+              []                                       []
+   ~~^-~^_~^~/  \~^-~^~_~^-~_^~-^~_^~~-^~_~^~-~_~-^~_^/  \~^-~_~^-~~- 
+  ~ _~~- ~^-^~-^~~- ^~_^-^~~_ -~^_ -~_-~~^- _~~_~-^_ ~^-^~~-_^-~ ~^
+     ~ ^- _~~_-  ~~ _ ~  ^~  - ~~^ _ -  ^~-  ~ _  ~~^  - ~_   - ~^_~
+       ~-  ^_  ~^ -  ^~ _ - ~^~ _   _~^~-  _ ~~^ - _ ~ - _ ~~^ -
+          ~^ -_ ~^^ -_ ~ _ - _ ~^~-  _~ -_   ~- _ ~^ _ -  ~ ^-
+              ~^~ - _ ^ - ~~~ _ - _ ~-^ ~ __- ~_ - ~  ~^_-
+                  ~ ~- ^~ -  ~^ -  ~ ^~ - ~~  ^~ - ~");
+                  
+   String stoichProblem = getStoichiometryProblem();
+   System.out.println(stoichProblem.substring(0, stoichProblem.indexOf("|"));
+   String answer = console.nextLine();
+   if (answer.toUpperCase().equals(stoichProblem.substring(stoichProblem.indexOf("|") + 1))) {
+      System.out.println("Congratulations, you made it past the bridge safely!");
+    
+   }
+   
+   else {
+      System.out.println("You fell into the water. Lose a life.");
+      lives--;
+      System.out.println("System.out.println("
+                                           ^^
+      ^^      ..                                       ..
+              []                                       []
+            .:[]:_          ^^                       ,:[]:.
+          .: :[]: :-.                             ,-: :[]: :.
+        .: : :[]: : :`._                       ,.': : :[]: : :.
+      .: : : :[]: : : : :-._               _,-: : : : :[]: : : :.
+  _..: : : : :[]: : : : : : :-._________.-: : : : : : :[]: : : : :-._
+  _:_:_:_:_:_:[]:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:[]:_:_:_:_:_:_
+  !!!!!!!!!!!![]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!![]!!!!!!!!!!!!!
+  ^^^^^^^^^^^^[]^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[]^^^^^^^^^^^^^
+              []                                       []
+              []                                       []
+              []                                       []
+   ~~^-~^_~^~/  \~^-~^~_~^-~_^~-^~_^~~-^~_~^~-~_~-^~_^/  \~^-~_~^-~~- 
+  ~ _~~- ~^-^~-^~~- ^~_^-^~~_ -~^_ -~_-~~^- _~~_~-^_ ~^-^~~-_^-~ ~^
+     ~ ^- _~~_-  ~~ _ ~  ^~  - ~~^ \
+                        \    O
+                        _\|  |  }       ahhh
+                          M_/|\_|}	
+                             |  }
+                            / \
+                          _/   \_
+_ -  ^~-  ~ _  ~~^  - ~_   - ~^_~
+       ~-  ^_  ~^ -  ^~ _ - ~^~ _   _~^~-  _ ~~^ - _ ~ - _ ~~^ -
+          ~^ -_ ~^^ -_ ~ _ - _ ~^~-  _~ -_   ~- _ ~^ _ -  ~ ^-
+              ~^~ - _ ^ - ~~~ _ - _ ~-^ ~ __- ~_ - ~  ~^_-
+                  ~ ~- ^~ -  ~^ -  ~ ^~ - ~~  ^~ - ~");
+                  
+    System.out.println("Lives: " + lives);
+    
+    System.out.println("\n\n                               |>>>
+                   _                      _                |
+    ____________ .' '.    _____/----/-\ .' './========\   / \
+   //// ////// /V_.-._\  |.-.-.|===| _ |-----| u    u |  /___\
+  // /// // ///==\ u |.  || | ||===||||| |T| |   ||   | .| u |_ _ _ _ _ _
+ ///////-\////====\==|:::::::::::::::::::::::::::::::::::|u u| U U U U U
+ |----/\u |--|++++|..|'''''''''''::::::::::::::''''''''''|+++|+-+-+-+-+-+
+ |u u|u | |u ||||||..|              '::::::::'           |===|>=== _ _ ==
+ |===|  |u|==|++++|==|              .::::::::.           | T |....| V |..
+ |u u|u | |u ||HH||         \|/    .::::::::::.
+ |===|_.|u|_.|+HH+|_              .::::::::::::.              _
+                __(_)___         .::::::::::::::.         ___(_)__
+---------------/  / \  /|       .:::::;;;:::;;:::.       |\  / \  \-------
+______________/_______/ |      .::::::;;:::::;;:::.      | \_______\________
+|       |     [===  =] /|     .:::::;;;::::::;;;:::.     |\ [==  = ]   |
+|_______|_____[ = == ]/ |    .:::::;;;:::::::;;;::::.    | \[ ===  ]___|____
+     |       |[  === ] /|   .:::::;;;::::::::;;;:::::.   |\ [=  ===] |
+_____|_______|[== = =]/ |  .:::::;;;::::::::::;;;:::::.  | \[ ==  =]_|______
+ |       |    [ == = ] /| .::::::;;:::::::::::;;;::::::. |\ [== == ]      |
+_|_______|____[=  == ]/ |.::::::;;:::::::::::::;;;::::::.| \[  === ]______|_
+   |       |  [ === =] /.::::::;;::::::::::::::;;;:::::::.\ [===  =]   |
+___|_______|__[ == ==]/.::::::;;;:::::::::::::::;;;:::::::.\[=  == ]___|_____");
+    
+    System.out.println("\n\nAfter surviving (or not surviving, if you’re absolutely horrible and don’t deserve to be in Kooitopia) the scary bridge! We now come to the metropolitan area of Kooitopia. The air can be somewhat monoxious, due to the high amounts of chemistry experiments conducted at all times.\n\nIn order to breathe safely, solve this gas equation in order to obtain goggles and a gas mask.");
+    
+    String gasProblem = getGasProblem();
+    System.out.println(gasProblem.substring(0, gasProblem.getIndexOf("|");
+    String answer = console.nextLine();
+    
+    if (answer.toUpperCase.equals(gasProblems.substring(gasProblem.getIndexOf("|") + 1) {
+        System.out.println("Congratulations! You didn’t suffocate to death!");
+    }
+    
+    else {
+        System.out.println("Too bad, you suffocated to death. You lose one life.");
+        lives--;
+    }
+    
+    System.out.println("\n\nLives: " + lives);
+    
+    System.out.println("  
+  -----                                                               -----
+1 | H |                                                               |He |
+  |---+----                                       --------------------+---|
+2 |Li |Be |                                       | B | C | N | O | F |Ne |
+  |---+---|                                       |---+---+---+---+---+---|
+3 |Na |Mg |3B  4B  5B  6B  7B |    8B     |1B  2B |Al |Si | P | S |Cl |Ar |
+  |---+---+---------------------------------------+---+---+---+---+---+---|
+4 | K |Ca |Sc |Ti | V |Cr |Mn |Fe |Co |Ni |Cu |Zn |Ga |Ge |As |Se |Br |Kr |
+  |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
+5 |Rb |Sr | Y |Zr |Nb |Mo |Tc |Ru |Rh |Pd |Ag |Cd |In |Sn |Sb |Te | I |Xe |
+  |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
+6 |Cs |Ba |LAN|Hf |Ta | W |Re |Os |Ir |Pt |Au |Hg |Tl |Pb |Bi |Po |At |Rn |
+  |---+---+---+------------------------------------------------------------
+7 |Fr |Ra |ACT|
+  -------------
+              -------------------------------------------------------------
+   Lanthanide |La |Ce |Pr |Nd |Pm |Sm |Eu |Gd |Tb |Dy |Ho |Er |Tm |Yb |Lu |
+              |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
+   Actinide   |Ac |Th |Pa | U |Np |Pu |Am |Cm |Bk |Cf |Es |Fm |Md |No |Lw |
+              -------------------------------------------------------------");
+             
+      System.out.println("\n\nNow we leave the cluttered metropolitan area of Kooitopia, and come to the electricity generators. The air is full of negative electrons, and many citizens of Kooitopia come to study the periodic trends the electronegative air shows. Identify the elements in the correct periodic trend, or face the angry citizens of Kooitopia for interrupting their experiments.");
+      
+      
+
+        
+    
+    
+    
+    
+    
+
+      
+   
+   public static String getStoichiometryProblem() {
+      int random = ((double) Math.random() * 5) + 1;
+      
+      if (random == 1) {
+          return "The weight of H2SO4 (molecular weight 98.1) in 50.0 milliliters of a 6.00-molar solution is
+
+(A) 3.10 grams
+(B) 12.0 grams
+(C) 29.4 grams
+(D) 294 grams
+(E) 300. grams |C");
+      }
+
+      if (random == 2) {
+          return " How many grams of calcium nitrate, Ca(NO3)2, contains 24 grams of oxygen atoms?
+
+(A) 164 grams
+(B) 96 grams
+(C) 62 grams
+(D) 50. grams
+(E) 41 grams |E");
+      }
+
+      if (random == 3) {
+          return " The mass of element Q found in 1.00 mole of each of four different compounds is 38.0 grams, 57.0 grams, 76.0 grams, and 114 grams, respectively. A possible atomic weight of Q is
+
+(A) 12.7
+(B) 19.0
+(C) 27.5
+(D) 38.0
+(E) 57.0 |B");
+      }
+
+      if (random == 4) {
+          return "The simplest formula for an oxide of nitrogen that is 36.8 percent nitrogen by weight is
+
+(A) N2O
+(B) NO
+(C) NO2
+(D) N2O3
+(E) N2O5 |D");
+      }
+
+      if (random == 5) {
+          return "__ CH3CH2COOH(l) + __ O2(g) ---> __ CO2(g) + __ H2O(l)
+
+How many moles of O2 are required to oxidize 1 mole of CH3CH2COOH according to the reaction represented above?
+
+(A) 2 moles
+(B) 5/2 moles
+(C) 3 moles
+(D) 7/2 moles
+(E) 9/2 moles |D");
+      }
+
+      if (random == 6) {
+          return "When a hydrate of Na2CO3 is heated until all the water is removed, it loses 54.3 percent of its mass. The formula of the hydrate is
+
+(A) Na2CO3 . 10 H2O
+(B) Na2CO3 . 7 H2O
+(C) Na2CO3 . 5 H2O
+(D) Na2CO3 . 3 H2O
+(E) Na2CO3 . H2O |B");
+      }
+return "";
+}
+
+public static String getGasProblem() {
+    int random = ((double) Math.random() * 3) + 1;
+    
+    if (random == 1) {
+        return "Ammonia is created according to the balanced equation below.
+
+3H2+N2→2NH3
+
+The reaction is allowed to take place in a rigid container. Eight moles of hydrogen gas are mixed with two moles of nitrogen gas. The initial pressure exerted on the container is 5atm.
+
+Assuming the reaction runs to completion, what will the pressure exerted on the vessel be after the reaction takes place?
+
+Possible Answers:
+A) 5atm
+
+B) 0.5atm
+
+C) 6atm
+
+D) 4atm
+
+E) 3atm |E");
+    }
+    if (random == 2) {
+        return "How many moles will a gas that is behaving ideally be if it takes up 2L at 4atm at 37o C?
+
+Possible Answers:
+A) 0.379 mol
+
+B) 3.18 mol
+
+C) 0.314 mol
+
+D) 2.63 mol
+
+E) 0.6 mol |C");
+    }
+
+    if (random == 3) {
+        return "How many moles of carbon dioxide occupy a space of 16 liters at a pressure of 760torr and a temperature of 250K?
+
+R=0.0821LatmmolK
+
+Possible Answers:
+A) 6.02mol
+
+B) 22.4mol
+
+C) 0.78mol
+
+D) 16.0mol
+
+E) 593mol |C");
+    }
+    return "";
+}
+
+
+
+  
+
